@@ -1,4 +1,4 @@
-package com.mchzainuri.anmp
+package com.mchzainuri.anmp.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

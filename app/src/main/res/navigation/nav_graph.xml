@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.mchzainuri.anmp.LoginFragment"
+        android:name="com.mchzainuri.anmp.view.LoginFragment"
         android:label="Login">
         <action
             android:id="@+id/action_loginFragment_to_dashboardFragment"
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/dashboardFragment"
-        android:name="com.mchzainuri.anmp.DashboardFragment"
+        android:name="com.mchzainuri.anmp.view.DashboardFragment"
         android:label="Dashboard">
         <action
             android:id="@+id/action_dashboardFragment_to_createHabitFragment"
@@ -26,6 +26,6 @@
 
     <fragment
         android:id="@+id/createHabitFragment"
-        android:name="com.mchzainuri.anmp.CreateHabitFragment"
+        android:name="com.mchzainuri.anmp.view.CreateHabitFragment"
         android:label="Create New Habit" />
 </navigation>

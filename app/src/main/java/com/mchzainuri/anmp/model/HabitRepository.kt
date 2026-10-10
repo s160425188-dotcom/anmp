@@ -1,4 +1,4 @@
-package com.mchzainuri.anmp
+package com.mchzainuri.anmp.model
 
 object HabitRepository {
     private val habitList = mutableListOf<Habit>()

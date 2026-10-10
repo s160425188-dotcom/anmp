@@ -1,4 +1,4 @@
-package com.mchzainuri.anmp
+package com.mchzainuri.anmp.view
 
 import android.os.Bundle
 import android.view.View
@@ -7,7 +7,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.mchzainuri.anmp.R
 import com.mchzainuri.anmp.databinding.FragmentCreateHabitBinding
+import com.mchzainuri.anmp.viewmodel.HabitViewModel
 
 class CreateHabitFragment : Fragment(R.layout.fragment_create_habit) {
     private var _binding: FragmentCreateHabitBinding? = null

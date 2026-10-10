@@ -1,4 +1,4 @@
-package com.mchzainuri.anmp
+package com.mchzainuri.anmp.model
 
 data class Habit(
     val id: Int,

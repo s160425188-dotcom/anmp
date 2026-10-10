@@ -1,9 +1,13 @@
-package com.mchzainuri.anmp
+package com.mchzainuri.anmp.view
 
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.mchzainuri.anmp.R
 import com.mchzainuri.anmp.databinding.ItemHabitCardBinding
+import com.mchzainuri.anmp.model.Habit
 
 class HabitAdapter(
     private var habits: List<Habit>,
@@ -34,15 +38,15 @@ class HabitAdapter(
             if (item.isCompleted) {
                 tvStatus.text = "Completed"
                 tvStatus.setBackgroundResource(R.drawable.bg_status_completed)
-                progressBar.progressTintList = android.content.res.ColorStateList.valueOf(
-                    android.graphics.Color.parseColor("#4CAF50") // Warna Hijau saat selesai
+                progressBar.progressTintList = ColorStateList.valueOf(
+                    Color.parseColor("#4CAF50") // Warna Hijau saat selesai
                 )
                 btnPlus.isEnabled = false
             } else {
                 tvStatus.text = "In Progress"
                 tvStatus.setBackgroundResource(R.drawable.bg_status_in_progress)
-                progressBar.progressTintList = android.content.res.ColorStateList.valueOf(
-                    android.graphics.Color.parseColor("#6200EE") // Warna Ungu saat berlangsung
+                progressBar.progressTintList = ColorStateList.valueOf(
+                    Color.parseColor("#6200EE") // Warna Ungu saat berlangsung
                 )
                 btnPlus.isEnabled = true
             }

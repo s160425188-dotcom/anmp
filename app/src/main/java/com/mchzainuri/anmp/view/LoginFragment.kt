@@ -1,9 +1,10 @@
-package com.mchzainuri.anmp
+package com.mchzainuri.anmp.view
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.mchzainuri.anmp.R
 import com.mchzainuri.anmp.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment(R.layout.fragment_login) {

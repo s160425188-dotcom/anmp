@@ -1,9 +1,10 @@
-package com.mchzainuri.anmp
+package com.mchzainuri.anmp.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import com.mchzainuri.anmp.R
 import com.mchzainuri.anmp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.mchzainuri.anmp
+package com.mchzainuri.anmp.view
 
 import android.os.Bundle
 import android.view.View
@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.mchzainuri.anmp.R
 import com.mchzainuri.anmp.databinding.FragmentDashboardBinding
+import com.mchzainuri.anmp.viewmodel.HabitViewModel
 
 class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
     private var _binding: FragmentDashboardBinding? = null

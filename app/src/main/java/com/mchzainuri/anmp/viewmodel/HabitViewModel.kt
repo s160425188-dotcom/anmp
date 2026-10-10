@@ -1,8 +1,10 @@
-package com.mchzainuri.anmp
+package com.mchzainuri.anmp.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.mchzainuri.anmp.model.Habit
+import com.mchzainuri.anmp.model.HabitRepository
 
 class HabitViewModel : ViewModel() {
     private val _habits = MutableLiveData<List<Habit>>()
