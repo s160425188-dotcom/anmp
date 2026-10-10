@@ -1,21 +1,20 @@
 package com.mchzainuri.anmp.viewmodel
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import com.mchzainuri.anmp.model.Habit
 import com.mchzainuri.anmp.model.HabitRepository
 
-class HabitViewModel : ViewModel() {
+class HabitViewModel(application: Application) : AndroidViewModel(application) {
     private val _habits = MutableLiveData<List<Habit>>()
     val habits: LiveData<List<Habit>> get() = _habits
 
-    // Mengambil data habit terbaru dari Repository
     fun fetchHabits() {
-        _habits.value = HabitRepository.getHabits()
+        _habits.value = HabitRepository.getHabits(getApplication())
     }
 
-    // Menambahkan habit baru ke Repository
     fun addHabit(name: String, desc: String, goal: Int, unit: String, iconResId: Int) {
         val habit = Habit(
             id = System.currentTimeMillis().toInt(),
@@ -25,13 +24,12 @@ class HabitViewModel : ViewModel() {
             unit = unit,
             iconResId = iconResId
         )
-        HabitRepository.addHabit(habit)
+        HabitRepository.addHabit(getApplication(), habit)
         fetchHabits()
     }
 
-    // Memperbarui progress habit
     fun updateProgress(id: Int, delta: Int) {
-        HabitRepository.updateProgress(id, delta)
+        HabitRepository.updateProgress(getApplication(), id, delta)
         fetchHabits()
     }
 }

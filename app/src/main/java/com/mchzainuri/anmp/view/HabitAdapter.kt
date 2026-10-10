@@ -60,7 +60,6 @@ class HabitAdapter(
 
     override fun getItemCount(): Int = habits.size
 
-    // Mengbarui daftar data dalam RecyclerView saat ada perubahan
     fun updateList(newList: List<Habit>) {
         habits = newList
         notifyDataSetChanged()

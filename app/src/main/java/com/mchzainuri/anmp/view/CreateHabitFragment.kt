@@ -20,7 +20,7 @@ class CreateHabitFragment : Fragment(R.layout.fragment_create_habit) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentCreateHabitBinding.bind(view)
 
-        // Pilihan dropdown Spinner untuk Ikon
+
         val iconOptions = listOf("Water", "Fitness", "Read", "Meditation")
         val spinnerAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item, iconOptions)
         binding.spinnerIcon.adapter = spinnerAdapter
@@ -36,7 +36,7 @@ class CreateHabitFragment : Fragment(R.layout.fragment_create_habit) {
                 return@setOnClickListener
             }
 
-            // Pemetaan ikon berdasarkan pilihan Spinner
+
             val iconResId = when (binding.spinnerIcon.selectedItem.toString()) {
                 "Water" -> R.drawable.ic_water
                 "Fitness" -> R.drawable.ic_fitness
@@ -45,7 +45,7 @@ class CreateHabitFragment : Fragment(R.layout.fragment_create_habit) {
             }
 
             viewModel.addHabit(name, desc, goalStr.toInt(), unit, iconResId)
-            findNavController().popBackStack() // Kembali ke Dashboard
+            findNavController().popBackStack()
         }
     }
 

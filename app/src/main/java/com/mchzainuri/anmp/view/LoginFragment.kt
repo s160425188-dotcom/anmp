@@ -19,15 +19,15 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             val username = binding.etUsername.text.toString().trim()
             val password = binding.etPassword.text.toString().trim()
 
-            // Reset pesan error setiap kali tombol ditekan
             binding.tilUsername.error = null
             binding.tilPassword.error = null
 
-            // Validasi login hardcode sesuai ketentuan
             if (username == "student" && password == "123") {
+
+                com.mchzainuri.anmp.model.HabitRepository.activeUser = username
+
                 findNavController().navigate(R.id.action_loginFragment_to_dashboardFragment)
             } else {
-                // Menampilkan teks error warna merah di bawah input box
                 binding.tilUsername.error = "Username atau password salah!"
                 binding.tilPassword.error = "Username atau password salah!"
             }

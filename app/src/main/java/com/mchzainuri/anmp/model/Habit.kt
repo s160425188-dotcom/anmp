@@ -1,4 +1,5 @@
 package com.mchzainuri.anmp.model
+import java.io.Serializable
 
 data class Habit(
     val id: Int,
@@ -8,8 +9,9 @@ data class Habit(
     val goal: Int,
     val unit: String,
     val iconResId: Int
-) {
-    // Property tambahan untuk mengecek apakah habit sudah selesai
+) : Serializable
+{
+
     val isCompleted: Boolean
         get() = currentProgress >= goal
 }

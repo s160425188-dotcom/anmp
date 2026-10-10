@@ -27,12 +27,12 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = adapter
 
-        // Observe data dari ViewModel (MVVM)
+
         viewModel.habits.observe(viewLifecycleOwner) { list ->
             adapter.updateList(list)
         }
 
-        // Navigasi ke halaman Create Habit
+
         binding.fabAdd.setOnClickListener {
             findNavController().navigate(R.id.action_dashboardFragment_to_createHabitFragment)
         }
